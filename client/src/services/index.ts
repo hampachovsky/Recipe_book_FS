@@ -1,1 +1,2 @@
-export { fetchClient } from './endpoints';
+export { fetchFilterOptions, fetchRecipes } from './actions';
+export { fetchClient, filtersAPI, recipeAPI } from './endpoints';

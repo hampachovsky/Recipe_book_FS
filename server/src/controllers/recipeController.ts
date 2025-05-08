@@ -26,8 +26,7 @@ class RecipeController {
     const { id } = req.params;
     try {
       const response = await axios.get(`${API_URL}/lookup.php?i=${id}`);
-      res.json(response.data);
-      res.status(200).json('recipe');
+      res.status(200).json(response.data.meals[0]);
     } catch (error) {
       res.status(500).json({ message: 'Error fetching recipe', error });
     }

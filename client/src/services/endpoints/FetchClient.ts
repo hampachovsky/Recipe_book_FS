@@ -7,7 +7,7 @@ class RequestClient {
     this.baseURL = baseURL;
   }
 
-  public async request(url: string, options: RequestInit): Promise<unknown> {
+  public async request<T>(url: string, options: RequestInit): Promise<T> {
     const headers = new Headers(options.headers || {});
 
     if (!headers.has('Content-Type')) {
